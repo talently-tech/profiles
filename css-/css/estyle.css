@@ -1,0 +1,17 @@
+.avatar-container {
+    width: 60px;
+    height: 60px;
+    position: relative;
+ cursor: pointer;
+}
+.img-avatar{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+   border-radius:  50%;
+   border: 3px solid rgb(57, 187, 204)
+   
+}
