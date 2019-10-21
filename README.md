@@ -1,5 +1,23 @@
 # talently-profiles
 
+Esta web tendrá dos secciones/páginas
+
+1. Listado de perfiles
+2. Perfiles únicos
+
+### Listado de Perfiles
+
+Tendrá 3 componentes:
+- búsqueda
+- filtros
+- listado de perfiles
+
+### Perfiles únicos
+
+ Tendrá dos secciones
+- Sidebar con info detallada
+- Contenido con secciones de título y párrafo
+
 ## Colores y Fuentes
 
 ### Colores
