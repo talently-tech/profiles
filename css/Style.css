@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(70, 140, 219);
+}
+
+.avatar-img{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.avatar-name{
+    color: white ;
+    font-weight: 100;
+}
+
+.avatar-text{
+    color: white;
+    text-transform: capitalize;
+    font-weight: 100;
+}
+
+.avatar-info{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    text-align: center;
+}
+
+
+.avatar-link-shadow{
+    border-radius: 4px;
+    color:white;
+    font-weight: 100;
+}
+
+.avatar-info-text{
+    color:white !important;
+    font-weight: 100;
+}
+
+.avatar-info_direct{
+    margin-top:20px;
+    text-transform: capitalize;
+}
+
+svg:not(:root).svg-inline--fa{
+    color:white;
+}
+
+.avatar-text-white{
+    color: rgb(189, 185, 185);
+    opacity: .5;
+}
+
+.avatar-p_text a{
+    color:white;
+}
