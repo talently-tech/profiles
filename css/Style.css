@@ -49,3 +49,7 @@ svg:not(:root).svg-inline--fa{
     color: rgb(189, 185, 185);
     opacity: .5;
 }
+
+.avatar-p_text a{
+    color:white;
+}
