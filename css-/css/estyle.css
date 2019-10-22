@@ -1,11 +1,12 @@
 .bacgraund-avatar{
     background: rgba(128, 128, 128, 0.192);
-    padding: 20px; 
+    padding: 10px; 
 }
 
 .avatar-container {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
+    padding: 5px;
     /* position: relative; */
     /* cursor: pointer; */
 }
@@ -18,10 +19,35 @@
     /* object-position: center; */
    border-radius:  50%;
    border: 3px solid rgb(57, 187, 204);
-   
+   margin: -1px;
+}
+.nombres-avatar{
+    width: 120px;
+}
+.nombres-avatar h2{
+    font-size: 15px;
+    margin-bottom: -6px;
+}
+.nombres-avatar a{
+    font-size: 10px
+}
+.nombres-avatar span span{
+    color: white;
+    padding: 2px;
+    font-size: 12px;
+    background-color: rgb(26, 182, 202);
+    border-radius: 5px;
 }
 
 
+
 .link-icons li i{
-    color:black
+    color:black;
+    /* margin-bottom: 20px */
+    
+}
+
+.link-icons li, a{
+    text-decoration: none;
+    list-style: none;
 }
