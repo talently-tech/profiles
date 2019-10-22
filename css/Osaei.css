@@ -1,0 +1,102 @@
+
+
+.avatar-background{
+    background-color: rgb(70, 140, 219);
+}
+
+.avatar-img{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.avatar-name{
+    color: white ;
+    font-weight: 100;
+}
+
+.avatar-text{
+    color: white;
+    text-transform: capitalize;
+    font-weight: 100;
+}
+
+.avatar-info{
+    text-align: center;
+}
+
+
+.avatar-link-shadow{
+    border-radius: 4px;
+    color:white;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.avatar_top{
+    border-top: 1px solid white;
+}
+
+.avatar_bottom{
+border-bottom: 1px solid white;
+}
+
+.avatar-info-text{
+    color:white !important;
+    font-weight: 100;
+}
+
+.avatar-info_direct{
+    margin-top:20px;
+    text-transform: capitalize;
+}
+
+svg:not(:root).svg-inline--fa{
+    color:white;
+}
+
+.avatar-text-white{
+    color: rgb(189, 185, 185);
+    opacity: .5;
+}
+
+.avatar-p_text a{
+    color:white;
+}
+
+.avatar-background_white{
+    background-color: white;
+}
+
+.avatar-title{
+    margin-top: 60px;
+}
+
+.avatar-title p{
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.avatar-h2_title{
+    color:rgb(70, 140, 219);
+    font-weight: 100;
+    border-bottom: 1px solid rgb(70, 140, 219);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.avatar-h3_title{
+    color:rgb(70, 140, 219);
+    font-weight: 100;
+    border-bottom: 1px solid rgb(70, 140, 219);
+    text-transform: capitalize;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
