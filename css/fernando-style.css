@@ -1,3 +1,7 @@
+.c-profile{
+    border: 1px solid rgba(128, 128, 128, 0.192);
+    border-radius: 5px;
+}
 .bacgraund-avatar{
     background: rgba(128, 128, 128, 0.192);
     padding: 10px; 
@@ -29,7 +33,7 @@
     margin-bottom: -6px;
 }
 .nombres-avatar a{
-    font-size: 10px
+    font-size: 12px
 }
 .nombres-avatar span span{
     color: white;
@@ -40,10 +44,31 @@
 }
 
 
+.info-avatar{
+    margin: 13px;
+    width: 400px;
+}    
 
-.link-icons li i{
-    color:black;
-    /* margin-bottom: 20px */
+.info-avatar h3{
+    font-size: 15px;
+    font-weight: 700
+}
+
+.info-avatar p{
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.link-icons{
+    border-left: 1px solid rgba(128, 128, 128, 0.192);
+
+}
+
+
+.link-icons li  i{
+    color: var(--plomo-talently);
+      /* margin-bottom: 20px */
     
 }
 
