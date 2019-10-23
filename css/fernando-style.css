@@ -29,8 +29,11 @@ body {
     background: transparent;
     border: none;
 }
-.btn-filters i{
+.btn-filters a{
+    text-decoration: none;
     color: var(--plomo-talently);
+}
+.btn-filters i{
     padding-right: 5px;
 }
 .form-selec select{
