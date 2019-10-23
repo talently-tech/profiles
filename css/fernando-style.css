@@ -1,14 +1,38 @@
 body {
     font-family: var(--text-roboto);
 }
+.backgraund-busqueda{
+    background: rgba(128, 128, 128, 0.192);
+    color: var(--plomo-talently);
+    padding-bottom: 17px;
+}
+.form-busqueda{
+    margin: 10px 0px 16px 0;
+}
 .form-busqueda input{
     width: 100%;
-    border: none
+    border: none;
+    background: transparent;
 }
 .form-busqueda form{
     border-bottom: 3px solid rgba(128, 128, 128, 0.192);
+    font-size: 16px;
+    padding: 6px;
 }
-
+.form-busqueda  i{
+    margin-top: 5px;
+    color: var(--plomo-talently)
+}
+.form-selec select{
+    background-color: white;
+    padding: 8px 0 5px 5px;
+    width: 24%;
+    border-radius: 5px;
+    color: var(--plomo-talently);
+}
+.form-selec select, option{
+    font-size: 15px
+}
 .c-profile{
     border: 1px solid rgba(128, 128, 128, 0.192);
     border-radius: 5px;
@@ -33,10 +57,11 @@ body {
 }
 .nombres-avatar{
     width: 120px;
+    margin-left: 10px;
 }
 .nombres-avatar h2{
     font-size: 15px;
-    margin-bottom: -6px;
+    margin-bottom: 0px;
     color: var(--morado-talently);
 }
 .nombres-avatar span{
@@ -61,7 +86,6 @@ body {
 }
 .info-avatar p{
     font-size: 13px;
-    font-weight: 600;
     margin: 0;
 }
 .link-icons-container{
