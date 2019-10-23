@@ -5,6 +5,7 @@ body {
     background: rgba(128, 128, 128, 0.192);
     color: var(--plomo-talently);
     padding-bottom: 17px;
+    box-shadow: 0 0 10px #999
 }
 .form-busqueda{
     margin: 10px 0px 16px 0;
@@ -22,6 +23,15 @@ body {
 .form-busqueda  i{
     margin-top: 5px;
     color: var(--plomo-talently)
+}
+.btn-filters button{
+    font-size: 17px;
+    background: transparent;
+    border: none;
+}
+.btn-filters i{
+    color: var(--plomo-talently);
+    padding-right: 5px;
 }
 .form-selec select{
     background-color: white;
