@@ -3,5 +3,10 @@
     --rojo-talently-oscuro: rgb(174, 0, 13);
     --morado-talently: rgb(61, 53, 110);
     --plomo-talently: rgb(47, 47, 47);
+<<<<<<< HEAD
     --blanco-talenty: rgb(230, 227, 227);
+=======
+    --text-roboto: 'Roboto', sans-serif;
+
+>>>>>>> 3f359b9e604c26fbbd5111c379d6c2931760aa76
 }
