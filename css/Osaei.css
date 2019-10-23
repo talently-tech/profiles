@@ -1,12 +1,26 @@
 
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 .avatar-background{
-    background-color: rgb(70, 140, 219);
+    /* background-image: url("../img/avatar.jpg") ; */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    background-color:  var(--morado-talently);
 }
 
 .avatar-img{
     margin-top: 40px;
     text-align: center;
+}
+
+.img-avatar{
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
 }
 
 .avatar-name{
@@ -20,16 +34,20 @@
     font-weight: 100;
 }
 
-.avatar-info{
-    text-align: center;
-}
-
-
 .avatar-link-shadow{
     border-radius: 4px;
     color:white;
     font-weight: 100;
     cursor: pointer;
+    display: inline-block;
+}
+
+.avatar_top p{
+    margin-top: 1rem;
+}
+
+.avatar_bottom p{
+    margin-bottom: 1rem;
 }
 
 .avatar_top{
@@ -43,6 +61,9 @@ border-bottom: 1px solid white;
 .avatar-info-text{
     color:white !important;
     font-weight: 100;
+    line-height: 0px;
+    font-size: 14px;
+    display: inline-block;
 }
 
 .avatar-info_direct{
@@ -50,13 +71,44 @@ border-bottom: 1px solid white;
     text-transform: capitalize;
 }
 
+.avatar-info_direct a{
+    color: var(--blanco-talenty);
+    text-transform: none;
+}
+
 svg:not(:root).svg-inline--fa{
     color:white;
+    margin-right: 5px;
 }
 
 .avatar-text-white{
     color: rgb(189, 185, 185);
     opacity: .5;
+    margin-bottom: -2px;
+}
+
+.avatar-location{
+    margin-bottom:10px;
+}
+
+.avatar-email{
+    margin-bottom:10px;
+}
+
+.avatar-pronouns{
+    margin-bottom:10px;
+}
+
+.avatar-phone{
+    margin-bottom:10px;
+}
+
+.avatar-github{
+    margin-bottom:10px;
+}
+
+.avatar-twitter{
+    margin-bottom:30px;
 }
 
 .avatar-p_text a{
@@ -82,7 +134,7 @@ svg:not(:root).svg-inline--fa{
     border-bottom: 1px solid rgb(70, 140, 219);
     text-transform: uppercase;
     text-align: center;
-    font-size: 28px;
+    font-size: 21px;
     margin-top: 20px;
 }
 
