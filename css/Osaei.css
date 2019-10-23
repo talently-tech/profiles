@@ -31,17 +31,17 @@ body{
 .avatar-text{
     color: white;
     text-transform: capitalize;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 14px;
 }
 
 .avatar-link-shadow{
     border-radius: 4px;
     color:white;
-    font-weight: 100;
+    font-weight: 300;
     display: inline-block;
     height: 26px;
-    width: 125px;
+    width: 124px;
     background-color: #17a2b8;
     font-size: 14px;
     text-align: center;
@@ -67,7 +67,7 @@ body{
 
 .avatar-info-text{
     color:white !important;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 0px;
     font-size: 14px;
     display: inline-block;
@@ -81,6 +81,8 @@ body{
 .avatar-info_direct a{
     color: var(--blanco-talenty);
     text-transform: none;
+    font-size: 16px;
+    font-weight: 300;
 }
 
 svg:not(:root).svg-inline--fa{
@@ -92,6 +94,7 @@ svg:not(:root).svg-inline--fa{
     color: rgb(189, 185, 185);
     opacity: .5;
     margin-bottom: -2px;
+    font-size: 15px;
 }
 
 .avatar-location{
