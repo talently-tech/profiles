@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -32,14 +32,21 @@ body{
     color: white;
     text-transform: capitalize;
     font-weight: 100;
+    font-size: 14px;
 }
 
 .avatar-link-shadow{
     border-radius: 4px;
     color:white;
     font-weight: 100;
-    cursor: pointer;
     display: inline-block;
+    height: 26px;
+    width: 125px;
+    background-color: #17a2b8;
+    font-size: 14px;
+    text-align: center;
+    padding: 3px;
+    margin-right: 15px;
 }
 
 .avatar_top p{
@@ -51,11 +58,11 @@ body{
 }
 
 .avatar_top{
-    border-top: 1px solid white;
+    border-top: 1px solid rgba(255, 255, 255, .2);
 }
 
 .avatar_bottom{
-border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 
 .avatar-info-text{
@@ -111,8 +118,8 @@ svg:not(:root).svg-inline--fa{
     margin-bottom:30px;
 }
 
-.avatar-p_text a{
-    color:white;
+.avatar-p_text{
+    color:white !important;
 }
 
 .avatar-background_white{
@@ -130,7 +137,7 @@ svg:not(:root).svg-inline--fa{
 
 .avatar-h2_title{
     color:rgb(70, 140, 219);
-    font-weight: 100;
+    font-weight: 400;
     border-bottom: 1px solid rgb(70, 140, 219);
     text-transform: uppercase;
     text-align: center;
@@ -140,7 +147,7 @@ svg:not(:root).svg-inline--fa{
 
 .avatar-h3_title{
     color:rgb(70, 140, 219);
-    font-weight: 100;
+    font-weight: 400;
     border-bottom: 1px solid rgb(70, 140, 219);
     text-transform: capitalize;
     font-size: 28px;
