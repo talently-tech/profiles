@@ -15,7 +15,7 @@ const composedFilter = e => {
 	const years = document.getElementById("years").value;
 	const language = document.getElementById("programming_languages").value;
 	const searchText = searchBar.value.toLowerCase();
-	console.log(searchText === "");
+
 	//filter by age
 	const filteredProfiles = allProfiles
 		.filter(profile => profile.dataset.years >= years)
