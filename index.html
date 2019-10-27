@@ -1,311 +1,286 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-		<!-- Bootstrap CSS-->
-		<link
-			href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=latin-ext"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="css/css/bootstrap.min.css" />
-		<link
-			rel="stylesheet"
-			href="css/fontawesome/fontawesome-free-5.8.2-web/css/all.css"
-		/>
-		<link rel="stylesheet" href="colores.variables.css" />
-		<link rel="stylesheet" href="css/fernando-style.css" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-		<title>Index</title>
-	</head>
+	<!-- Bootstrap CSS-->
+	<link
+		href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=latin-ext"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="css/css/bootstrap.min.css" />
+	<link rel="stylesheet"
+		href="css/fontawesome/fontawesome-free-5.8.2-web/css/all.css" />
+	<link rel="stylesheet" href="colores.variables.css" />
+	<link rel="stylesheet" href="css/fernando-style.css" />
+	<link rel="stylesheet" href="css/nestor.css">
 
-	<body>
-		<div class="backgraund-busqueda mb-4">
-			<div class="container">
-				<div class="row">
-					<div
-						class="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2"
-					>
-						<div>
-							<div class="form-busqueda my-3">
-								<form class="d-flex align-items-center">
-									<input
-										type="search"
-										name="search"
-										placeholder="Search by name"
-										id="search"
-									/>
-									<i class="fas fa-search"></i>
-								</form>
+	<title>Index</title>
+</head>
+
+<body>
+	<header class="c-header">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<h1 class="text-hide mb-0 mr-md-4">Talently
+				<a class="navbar-brand" href="#">
+					<img src="./talently-logo-1.svg" alt="Talently" class="p-2">
+				</a>
+			</h1>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item m-2">
+						<a class="nav-link" href="#">Conoce el programa</a>
+					</li>
+					<li class="nav-item m-2">
+						<a class="nav-link" href="#">Preguntas frecuentes</a>
+					</li>
+					<li class="nav-item m-2">
+						<a class="nav-link" href="#">Blog</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="backgraund-busqueda mb-4">
+		<div class="container">
+			<div class="row">
+				<div
+					class="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+					<div>
+						<div class="form-busqueda my-3">
+							<form class="d-flex align-items-center">
+								<input type="search" name="search"
+									placeholder="Search by name" id="search" />
+								<i class="fas fa-search"></i>
+							</form>
+						</div>
+						<div class="form-selec my-3">
+							<div class="btn-filters d-md-block d-lg-none">
+								<a href="#">
+									<i class="fas fa-sliders-h"></i>
+									<span>Show filters</span>
+								</a>
 							</div>
-							<div class="form-selec my-3">
-								<div class="btn-filters d-md-block d-lg-none">
-									<a href="#">
-										<i class="fas fa-sliders-h"></i>
-										<span>Show filters</span>
-									</a>
-								</div>
-								<div class=" d-none d-lg-block">
-									<form
-										class="d-flex justify-content-between"
-										action=""
-									>
-										<div class="select">
-											<select name="years" id="years">
-												<option value="1"
-													>Experience - 1+ years</option
-												>
-												<option value="2"
-													>Experience - 2+ years</option
-												>
-												<option value="3"
-													>Experience - 3+ years</option
-												>
-												<option value="4"
-													>Experience - 4+ years</option
-												>
-												<option value="5"
-													>Experience - 5+ years</option
-												>
-											</select>
-										</div>
-										<div class="select">
-											<select
-												name="programming_languages"
-												id="programming_languages"
-											>
-												<option value="all"
-													>Programming Languages - Any
-												</option>
-												<option value="python">Python </option>
-												<option value="js">Javascript </option>
-												<option value="java">Java </option>
-												<option value="ruby">Ruby </option>
-											</select>
-										</div>
-										<div class="select">
-											<select name="" id="">
-												<option value="Items2"
-													>Location - Any
-												</option>
-											</select>
-										</div>
-										<div class="select">
-											<select name="" id="">
-												<option value="Items3">At RC - Any </option>
-											</select>
-										</div>
-									</form>
-								</div>
+							<div class=" d-none d-lg-block">
+								<form class="d-flex justify-content-between" action="">
+									<div class="select">
+										<select name="years" id="years">
+											<option value="1">Experience - 1+ years
+											</option>
+											<option value="2">Experience - 2+ years
+											</option>
+											<option value="3">Experience - 3+ years
+											</option>
+											<option value="4">Experience - 4+ years
+											</option>
+											<option value="5">Experience - 5+ years
+											</option>
+										</select>
+									</div>
+									<div class="select">
+										<select name="programming_languages"
+											id="programming_languages">
+											<option value="all">Programming Languages - Any
+											</option>
+											<option value="python">Python </option>
+											<option value="js">Javascript </option>
+											<option value="java">Java </option>
+											<option value="ruby">Ruby </option>
+										</select>
+									</div>
+									<div class="select">
+										<select name="" id="">
+											<option value="Items2">Location - Any
+											</option>
+										</select>
+									</div>
+									<div class="select">
+										<select name="" id="">
+											<option value="Items3">At RC - Any </option>
+										</select>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="container">
-			<div class="row">
-				<div
-					id="profilesContainer"
-					class="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2"
-				>
-					<article
-						class="d-flex c-profile my-4"
-						data-languages="js "
-						data-years="4"
-						data-name="Carlos Alva"
-					>
-						<div
-							class="col-10 col-sm-11 col-lg-5 bacgraund-avatar d-flex"
-						>
-							<div class="d-flex">
-								<div class="avatar-container">
-									<img
-										class="img-fluid"
-										src="img/carlos-alva.jpg"
-										alt=""
-									/>
-								</div>
-								<div class="nombres-avatar flex-direction-column ">
-									<a href="profile.html">
-										<h2 class="mb-0">Carlos Alva</h2>
-									</a>
-									<p class="mb-0">
-										<span
-											><i class="fas fa-map-marker-alt"></i> San
-											Francisco, CA</span
-										>
-									</p>
-									<div>
-										<span>Residente - Nov'16</span>
-										<span>Residente - Oct'15</span>
-									</div>
-								</div>
+	<div class="container">
+		<div class="row">
+			<div id="profilesContainer"
+				class="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+				<article class="d-flex c-profile my-4" data-languages="js "
+					data-years="4" data-name="Carlos Alva">
+					<div class="col-10 col-sm-11 col-lg-5 bacgraund-avatar d-flex">
+						<div class="d-flex">
+							<div class="avatar-container">
+								<img class="img-fluid" src="img/carlos-alva.jpg"
+									alt="" />
 							</div>
-						</div>
-						<div class="col-2 col-sm-1 col-lg-7 p-0 d-flex ">
-							<div class="info-avatar d-none d-lg-block ">
-								<h3>Before RC</h3>
-								<p>
-									Lorem ipsum dolor, sit amet consectetur adipisicing
-									elit. Quas, ea, vel voluptatum error nemo assumenda
-									earum ullam quos saepe itaque accusamus
-									reprehenderit.
+							<div class="nombres-avatar flex-direction-column ">
+								<a href="profile.html">
+									<h2 class="mb-0">Carlos Alva</h2>
+								</a>
+								<p class="mb-0">
+									<span><i class="fas fa-map-marker-alt"></i> San
+										Francisco, CA</span>
 								</p>
-							</div>
-							<div class="link-icons-container">
-								<ul
-									class="link-icons text-center align-items-center h-100 m-0  p-0 d-flex flex-column justify-content-around"
-								>
-									<li>
-										<a href="#"><i class="fas fa-envelope"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fab fa-linkedin-in"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fab fa-github"></i></a>
-									</li>
-								</ul>
+								<div>
+									<span>Remote</span>
+									<span>Relocation</span>
+								</div>
 							</div>
 						</div>
-					</article>
+					</div>
+					<div class="col-2 col-sm-1 col-lg-7 p-0 d-flex ">
+						<div class="info-avatar d-none d-lg-block ">
+							<h3>Before RC</h3>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing
+								elit. Quas, ea, vel voluptatum error nemo assumenda
+								earum ullam quos saepe itaque accusamus
+								reprehenderit.
+							</p>
+						</div>
+						<div class="link-icons-container">
+							<ul
+								class="link-icons text-center align-items-center h-100 m-0  p-0 d-flex flex-column justify-content-around">
+								<li>
+									<a href="#"><i class="fas fa-envelope"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fab fa-linkedin-in"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fab fa-github"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</article>
 
-					<article
-						class="d-flex c-profile my-4"
-						data-languages="python  ruby"
-						data-years="5"
-						data-name="Renny Rodriguez"
-					>
-						<div
-							class="col-10 col-sm-11 col-lg-5 bacgraund-avatar d-flex"
-						>
-							<div class="d-flex">
-								<div class="avatar-container">
-									<img
-										class="img-fluid"
-										src="img/renny-rodriguez.jpg"
-										alt=""
-									/>
-								</div>
-								<div class="nombres-avatar flex-direction-column ">
-									<a href="profile.html">
-										<h2 class="mb-0">Renny Rodriguez</h2>
-									</a>
-									<p class="mb-0">
-										<span
-											><i class="fas fa-map-marker-alt"></i> San
-											Francisco, CA</span
-										>
-									</p>
-									<div>
-										<span>Residente - Nov'16</span>
-										<span>Residente - Oct'15</span>
-									</div>
-								</div>
+				<article class="d-flex c-profile my-4" data-languages="python  ruby"
+					data-years="5" data-name="Renny Rodriguez">
+					<div class="col-10 col-sm-11 col-lg-5 bacgraund-avatar d-flex">
+						<div class="d-flex">
+							<div class="avatar-container">
+								<img class="img-fluid" src="img/renny-rodriguez.jpg"
+									alt="" />
 							</div>
-						</div>
-						<div class="col-2 col-sm-1 col-lg-7 p-0 d-flex ">
-							<div class="info-avatar d-none d-lg-block ">
-								<h3>Interests</h3>
-								<p>
-									Lorem ipsum dolor, sit amet consectetur adipisicing
-									elit. Quas, ea, vel voluptatum error nemo assumenda
-									earum ullam quos saepe itaque accusamus
-									reprehenderit.
+							<div class="nombres-avatar flex-direction-column ">
+								<a href="profile.html">
+									<h2 class="mb-0">Renny Rodriguez</h2>
+								</a>
+								<p class="mb-0">
+									<span><i class="fas fa-map-marker-alt"></i> San
+										Francisco, CA</span>
 								</p>
-							</div>
-							<div class="link-icons-container">
-								<ul
-									class="link-icons text-center align-items-center h-100 m-0  p-0 d-flex flex-column justify-content-around"
-								>
-									<li>
-										<a href="#"><i class="fas fa-envelope"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fab fa-linkedin-in"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fab fa-github"></i></a>
-									</li>
-								</ul>
+								<div>
+									<span>Remote</span>
+									<span>Relocation</span>
+								</div>
 							</div>
 						</div>
-					</article>
+					</div>
+					<div class="col-2 col-sm-1 col-lg-7 p-0 d-flex ">
+						<div class="info-avatar d-none d-lg-block ">
+							<h3>Interests</h3>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing
+								elit. Quas, ea, vel voluptatum error nemo assumenda
+								earum ullam quos saepe itaque accusamus
+								reprehenderit.
+							</p>
+						</div>
+						<div class="link-icons-container">
+							<ul
+								class="link-icons text-center align-items-center h-100 m-0  p-0 d-flex flex-column justify-content-around">
+								<li>
+									<a href="#"><i class="fas fa-envelope"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fab fa-linkedin-in"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fab fa-github"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</article>
 
-					<article
-						class="d-flex c-profile my-4"
-						data-languages="java js"
-						data-years="6"
-						data-name="Fiorella Effio"
-					>
-						<div
-							class="col-10 col-sm-11 col-lg-5 bacgraund-avatar d-flex"
-						>
-							<div class="d-flex">
-								<div class="avatar-container">
-									<img
-										class="img-fluid"
-										src="img/fiorella-effio.jpg"
-										alt=""
-									/>
-								</div>
-								<div class="nombres-avatar flex-direction-column ">
-									<a href="profile.html">
-										<h2 class="mb-0">Fiorella Effio</h2>
-									</a>
-									<p class="mb-0">
-										<span
-											><i class="fas fa-map-marker-alt"></i> San
-											Francisco, CA</span
-										>
-									</p>
-									<div>
-										<span>Residente - Nov'16</span>
-										<span>Residente - Oct'15</span>
-									</div>
-								</div>
+				<article class="d-flex c-profile my-4" data-languages="java js"
+					data-years="6" data-name="Fiorella Effio">
+					<div class="col-10 col-sm-11 col-lg-5 bacgraund-avatar d-flex">
+						<div class="d-flex">
+							<div class="avatar-container">
+								<img class="img-fluid" src="img/fiorella-effio.jpg"
+									alt="" />
 							</div>
-						</div>
-						<div class="col-2 col-sm-1 col-lg-7 p-0 d-flex ">
-							<div class="info-avatar d-none d-lg-block ">
-								<h3>Before RC</h3>
-								<p>
-									Lorem ipsum dolor, sit amet consectetur adipisicing
-									elit. Quas, ea, vel voluptatum error nemo assumenda
-									earum ullam quos saepe itaque accusamus
-									reprehenderit.
+							<div class="nombres-avatar flex-direction-column ">
+								<a href="profile.html">
+									<h2 class="mb-0">Fiorella Effio</h2>
+								</a>
+								<p class="mb-0">
+									<span><i class="fas fa-map-marker-alt"></i> San
+										Francisco, CA</span>
 								</p>
-							</div>
-							<div class="link-icons-container">
-								<ul
-									class="link-icons text-center align-items-center h-100 m-0  p-0 d-flex flex-column justify-content-around"
-								>
-									<li>
-										<a href="#"><i class="fas fa-envelope"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fab fa-linkedin-in"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fab fa-github"></i></a>
-									</li>
-								</ul>
+								<div>
+									<span>Remote</span>
+									<span>Relocation</span>
+								</div>
 							</div>
 						</div>
-					</article>
-				</div>
+					</div>
+					<div class="col-2 col-sm-1 col-lg-7 p-0 d-flex ">
+						<div class="info-avatar d-none d-lg-block ">
+							<h3>Before RC</h3>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing
+								elit. Quas, ea, vel voluptatum error nemo assumenda
+								earum ullam quos saepe itaque accusamus
+								reprehenderit.
+							</p>
+						</div>
+						<div class="link-icons-container">
+							<ul
+								class="link-icons text-center align-items-center h-100 m-0  p-0 d-flex flex-column justify-content-around">
+								<li>
+									<a href="#"><i class="fas fa-envelope"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fab fa-linkedin-in"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fab fa-github"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</article>
 			</div>
 		</div>
+	</div>
 
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="css/js/jquery-3.2.1.slim.min.js"></script>
-		<script src="css/js/popper.min.js"></script>
-		<script src="css/js/bootstrap.min.js"></script>
-		<script src="./js/main.js"></script>
-	</body>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="css/js/jquery-3.2.1.slim.min.js"></script>
+	<script src="css/js/popper.min.js"></script>
+	<script src="css/js/bootstrap.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
 </html>
