@@ -52,5 +52,5 @@ for (let i = 0; i < selectors.length; i++) {
 	selectors[i].addEventListener("change", updateProfilesList);
 }
 
-// TODO throttle this if it starts showing up rendering delays
+// TODO throttle this if  rendering delays start to show up
 searchBar.addEventListener("keyup", updateProfilesList);
