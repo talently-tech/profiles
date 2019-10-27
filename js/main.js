@@ -1,43 +1,32 @@
 // Define interactive elements
-const profiles = document.getElementsByClassName("c-profile");
-const programmingLanguagesSelector = document.getElementById(
-	"programming_languages"
+const profilesContainer = document.getElementById("profilesContainer");
+const initialProfiles = document.getElementsByClassName("c-profile");
+const allProfiles = Array.from(initialProfiles).map(profile =>
+	profile.cloneNode(true)
 );
-const yearsSelector = document.getElementById("years");
+// selectors
+const selectors = document.querySelectorAll(".select select");
 
-// trigger years filter
-
-const filterByYears = e => {
-	for (let i = 0; i < profiles.length; i++) {
-		if (parseInt(profiles[i].dataset.years) < e.target.value) {
-			profiles[i].classList.add("d-none");
-			profiles[i].classList.remove("d-flex");
-		} else {
-			profiles[i].classList.remove("d-none");
-			profiles[i].classList.add("d-flex");
-		}
-	}
-};
-yearsSelector.addEventListener("change", filterByYears);
-
-// trigger languages filter
-const filterByProgLang = e => {
-	if (e.target.value === "all") {
-		for (let i = 0; i < profiles.length; i++) {
-			profiles[i].classList.remove("d-none");
-			profiles[i].classList.add("d-flex");
-		}
-	} else {
-		for (let i = 0; i < profiles.length; i++) {
-			if (profiles[i].dataset.languages.indexOf(e.target.value) !== -1) {
-				profiles[i].classList.remove("d-none");
-				profiles[i].classList.add("d-flex");
-			} else {
-				profiles[i].classList.add("d-none");
-				profiles[i].classList.remove("d-flex");
-			}
-		}
-	}
+const composedFilter = e => {
+	// current selectors values
+	const years = document.getElementById("years").value;
+	const language = document.getElementById("programming_languages").value;
+	//filter by age
+	const filteredProfiles = allProfiles
+		.filter(profile => profile.dataset.years >= years)
+		.filter(
+			profile =>
+				language === "all" ||
+				profile.dataset.languages.indexOf(language) !== -1
+		);
+	return filteredProfiles;
 };
 
-programmingLanguagesSelector.addEventListener("change", filterByProgLang);
+const updateProfilesList = e => {
+	profilesContainer.innerHTML = "";
+	composedFilter(e).map(profile => profilesContainer.appendChild(profile));
+};
+
+for (let i = 0; i < selectors.length; i++) {
+	selectors[i].addEventListener("change", updateProfilesList);
+}
