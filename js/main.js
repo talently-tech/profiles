@@ -10,7 +10,7 @@ const allProfiles = Array.from(initialProfiles).map(profile =>
 	profile.cloneNode(true)
 );
 
-const composedFilter = e => {
+const composedFilter = () => {
 	// current selectors values
 	const years = document.getElementById("years").value;
 	const language = document.getElementById("programming_languages").value;
@@ -32,9 +32,9 @@ const composedFilter = e => {
 	return filteredProfiles;
 };
 
-const updateProfilesList = e => {
+const updateProfilesList = () => {
 	profilesContainer.innerHTML = "";
-	composedFilter(e).map(profile => profilesContainer.appendChild(profile));
+	composedFilter().map(profile => profilesContainer.appendChild(profile));
 };
 
 // Add event listeners
