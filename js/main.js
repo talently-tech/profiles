@@ -20,17 +20,25 @@ const composedFilter = () => {
 	// current selectors values
 	const years = document.getElementById("years").value;
 	const language = document.getElementById("programming_languages").value;
+	const workOptions = document.getElementById("work_options").value;
 	const searchText = searchBar.value.toLowerCase();
 
 	//filter by age
 	const filteredProfiles = allProfiles
-		.filter(profile => profile.dataset.years >= years)
+		.filter(profile => profile.dataset.years >= years) //by years
 		.filter(
+			// by prog languages
 			profile =>
 				language === "all" ||
 				profile.dataset.languages.indexOf(language) !== -1
 		)
 		.filter(
+			profile =>
+				workOptions === "all" ||
+				profile.dataset.woptions.indexOf(workOptions) !== -1
+		)
+		.filter(
+			// by search input
 			profile =>
 				searchText === "" ||
 				profile.dataset.name.toLowerCase().indexOf(searchText) !== -1
