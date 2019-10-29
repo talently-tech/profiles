@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap");
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 .avatar-background {
 	/* background-image : url("../img/avatar.jpg") ; */
 	/* background-size  : contain; */
 	/* background-repeat: no-repeat; */
-	background-color    : var(--morado-talently);
+	background-color: var(--morado-talently);
 }
 
 .avatar-img {
@@ -17,34 +17,34 @@ body {
 }
 
 .img-avatar {
-	border       : 2px solid rgba(255, 255, 255, .5);
+	border: 2px solid var(--gris-talently);
 	border-radius: 50%;
-	height       : 100px;
-	object-fit   : cover;
-	width        : 100px;
+	height: 100px;
+	object-fit: cover;
+	width: 100px;
 }
 
 .avatar-name {
-	color      : white;
+	color: white;
 	font-weight: 200;
 }
 
 .avatar-text {
-	color      : rgba(255, 255, 255, .5);
+	color: var(--gris-talently);
 	font-weight: 400;
-	font-size  : 13px;
+	font-size: 13px;
 }
 
 .avatar-link-shadow {
-	border-radius   : 4px;
-	color           : white;
-	font-weight     : 400;
-	display         : inline-block;
-	background-color: #17a2b8;
-	font-size       : 13px;
-	text-align      : center;
-	padding         : 3px 6px;
-	margin-right    : 15px;
+	border-radius: 4px;
+	color: white;
+	font-weight: 400;
+	display: inline-block;
+	background-color: var(--morado-2);
+	font-size: 13px;
+	text-align: center;
+	padding: 3px 6px;
+	margin-right: 15px;
 }
 
 .avatar_top p {
@@ -56,19 +56,19 @@ body {
 }
 
 .avatar_top {
-	border-top: 1px solid rgba(255, 255, 255, .2);
+	border-top: 1px solid var(--gris-talently);
 }
 
 .avatar_bottom {
-	border-bottom: 1px solid rgba(255, 255, 255, .2);
+	border-bottom: 1px solid var(--gris-talently);
 }
 
 .avatar-info-text {
-	color      : rgba(255, 255, 255, .75) !important;
+	color: var(--gris-talently) !important;
 	font-weight: 400;
 	line-height: 0px;
-	font-size  : 13px;
-	display    : inline-block;
+	font-size: 13px;
+	display: inline-block;
 }
 
 .avatar-info_direct {
@@ -76,41 +76,42 @@ body {
 }
 
 .avatar-info_direct a {
-	color         : var(--blanco-talenty);
+	color: var(--blanco-talently);
 	text-transform: none;
-	font-size     : 13px;
-	font-weight   : 400;
+	font-size: 13px;
+	font-weight: 400;
 }
 
 .avatar-info_direct span {
-	color      : rgba(255, 255, 255, .6) !important;
-	font-size  : 13px;
+	color: var(--blanco-talently) !important;
+	font-size: 13px;
 	font-weight: 400;
-	display    : inline-block;
+	display: inline-block;
 	line-height: 1.2;
 }
 
 .avatar-info_direct i {
-	color       : rgba(255, 255, 255, .6) !important;
+	color: var(--blanco-talently) !important;
 	margin-right: 5px;
 }
 
 .avatar-text-white {
-	color        : rgba(255, 255, 255, .6);
-	font-size    : 13px;
+	color: var(--blanco-talently);
+	font-size: 13px;
 	margin-bottom: 0;
+	border-bottom: 1px solid var(--gris-talently);
 }
 
-.avatar-info_direct .row>div {
+.avatar-info_direct .row > div {
 	margin-bottom: 1rem;
 }
 
 .avatar-p_text {
-	color: white !important;
+	color: var(--blanco-leve) !important;
 }
 
 .avatar-background_white {
-	background-color: white;
+	background-color: var(--blanco-leve);
 }
 
 .avatar-title {
@@ -118,25 +119,25 @@ body {
 }
 
 .avatar-block p {
-	margin-top : 20px;
-	font-size  : 15px;
+	margin-top: 20px;
+	font-size: 15px;
 	font-weight: 400;
-	color      : var(--texto-plomo);
+	color: var(--texto-plomo);
 }
 
 .avatar-h2_title {
-	color        : rgb(70, 140, 219);
-	font-weight  : 300;
-	border-bottom: 1px solid rgba(70, 140, 219, .4);
-	font-size    : 24px;
-	margin-top   : 20px;
+	color: var(--titulo-oscuro);
+	font-weight: 300;
+	border-bottom: 1px solid var(--titulo-oscuro);
+	font-size: 24px;
+	margin-top: 20px;
 }
 
 .avatar-h3_title {
-	color         : rgb(70, 140, 219);
-	font-weight   : 400;
-	border-bottom : 1px solid rgb(70, 140, 219);
+	color: var(--titulo-oscuro);
+	font-weight: 400;
+	border-bottom: 1px solid var(--titulo-oscuro);
 	text-transform: capitalize;
-	font-size     : 28px;
-	margin-top    : 20px;
+	font-size: 28px;
+	margin-top: 20px;
 }
