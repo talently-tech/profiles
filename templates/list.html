@@ -1,9 +1,10 @@
 {% extends "layout.html" %} {% block title %}{{ this.title }}{% endblock %} {%
-block content %} {% include "partials/filters.html" %} 
-    {% include "partials/dev_profiles_list.html"%}
-{% endblock%}
-
-{%block
+block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{ '/css/fernando-style.css' | url }}" />
+<link rel="stylesheet" href="{{ '/css/nestor.css' | url }}" />
+{% endblock styles %} {% block content %} {% include "partials/filters.html" %}
+{% include "partials/dev_profiles_list.html"%} {% endblock%} {%block
 footer_scripts %}
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
