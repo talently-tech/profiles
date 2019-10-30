@@ -21,6 +21,7 @@ const composedFilter = () => {
 	const years = document.getElementById("years").value;
 	const language = document.getElementById("programming_languages").value;
 	const workOptions = document.getElementById("work_options").value;
+	const availability = document.getElementById("availability").value;
 	const searchText = searchBar.value.toLowerCase();
 
 	//filter by age
@@ -33,9 +34,16 @@ const composedFilter = () => {
 				profile.dataset.languages.indexOf(language) !== -1
 		)
 		.filter(
+			// by work option
 			profile =>
 				workOptions === "all" ||
 				profile.dataset.woptions.indexOf(workOptions) !== -1
+		)
+		.filter(
+			// by availability
+			profile =>
+				availability === "all" ||
+				profile.dataset.availability.indexOf(availability) !== -1
 		)
 		.filter(
 			// by search input
