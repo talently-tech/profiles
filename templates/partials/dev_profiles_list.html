@@ -1,0 +1,84 @@
+<div class="container">
+	<div class="row">
+		<div
+			id="profilesContainer"
+			class="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2"
+		>
+			{% for profile in this.children %}
+			<article
+				class="d-flex c-profile my-4"
+				data-languages="{%for lang in profile.programing_languages %} {{
+					lang
+				}}{% endfor %}"
+				data-years="{{ profile.years }}"
+				data-name="{{ profile.fullname }}"
+				data-woptions="{% for option in profile.work_options %}{{
+					option
+				}}{% endfor%}"
+				data-availability="{{ profile.availability or 'none'}}"
+			>
+				<div class="col-10 col-sm-11 col-lg-5 bacgraund-avatar d-flex">
+					<div class="d-flex">
+						<div class="avatar-container">
+							{% for image in profile.attachments.images %}
+								{% if loop.index <= 1%} {# esto lo hacemos porque solo queremos la primera imagen #}
+							<img class="img-fluid" src="{{image | url}}" alt="" />
+								{% endif %}
+							{% endfor%}
+						</div>
+						<div class="nombres-avatar flex-direction-column ">
+							<a href="{{profile | url}}">
+								<h2 class="mb-0">{{ profile.fullname }}</h2>
+							</a>
+							<p class="mb-0">
+								<span
+									><i class="fas fa-map-marker-alt"></i>
+									{{ profile.country }}</span
+								>
+							</p>
+							<div>
+								{% for option in profile.work_options %}
+								<span>{{ option }}</span>
+								{% endfor%}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 col-sm-1 col-lg-7 p-0 d-flex ">
+					<div class="info-avatar d-none d-lg-block ">
+						<h3>Before RC</h3>
+						<p>
+							{{ profile.summary }}
+						</p>
+					</div>
+					<div class="link-icons-container">
+						<ul
+							class="link-icons text-center align-items-center h-100 m-0  p-0 d-flex flex-column justify-content-around"
+						>
+							{% if profile.email%}
+							<li>
+								<a href="mailto:{{ profile.email }}"
+									><i class="fas fa-envelope"></i
+								></a>
+							</li>
+							{% endif %} {% if profile.linkedin %}
+							<li>
+								<a href="{{ profile.linkedin }}" target="_blank"
+									><i class="fab fa-linkedin-in"></i
+								></a>
+							</li>
+							{% endif %} {% if profile.github %}
+							<li>
+								<a href="{{ profile.github }}" target="_blank"
+									><i class="fab fa-github"></i
+								></a>
+							</li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+			</article>
+			{% endfor %}
+		</div>
+	</div>
+</div>
