@@ -23,7 +23,9 @@
 							{% for image in profile.attachments.images %} {% if
 							loop.index <= 1%} {# esto lo hacemos porque solo queremos
 							la primera imagen #}
-							<img class="img-fluid" src="{{ image | url }}" alt="" />
+							<a href="{{ profile | url }}">
+								<img class="img-fluid" src="{{ image | url }}" alt="" />
+							</a>
 							{% endif %} {% endfor%}
 						</div>
 						<div class="nombres-avatar flex-direction-column ">
@@ -47,12 +49,14 @@
 					</div>
 				</div>
 				<div class="col-2 col-sm-1 col-lg-7 p-0 d-flex ">
-					<div class="info-avatar d-none d-lg-block ">
-						<h3>About me</h3>
-						<p>
-							{{ profile.summary | truncate(140) }}
-						</p>
-					</div>
+					<a href="{{ profile | url }}">
+						<div class="info-avatar d-none d-lg-block ">
+							<h3>About me</h3>
+							<p>
+								{{ profile.summary | truncate(140) }}
+							</p>
+						</div>
+					</a>
 					<div class="link-icons-container">
 						<ul
 							class="link-icons text-center align-items-center h-100 m-0  p-0 d-flex flex-column justify-content-around"
