@@ -32,6 +32,22 @@ endblock %} {% block styles%}
 			</div>
 			<div class="col-md-12 avatar-info_direct mb-5">
 				<div class="row">
+					<div class="col-md-12">
+						<p class="avatar-text-white">
+							<i class="fas fa-laptop-code"></i>Programming Languages
+						</p>
+						<span class="avatar-p_text">
+							{% for prog_lang in this.programing_languages%}
+
+							{{ prog_lang }}, {% endfor %}
+						</span>
+					</div>
+					<div class="col-md-12">
+						<p class="avatar-text-white">
+							<i class="fas fa-code"></i>Technologies / Frameworks
+						</p>
+						<span class="avatar-p_text"> {{ this.technologies }}</span>
+					</div>
 					<div class="col-md-6">
 						<p class="avatar-text-white">
 							<i class="fas fa-map-marker-alt"></i>Location
@@ -115,23 +131,6 @@ endblock %} {% block styles%}
 							<i class="fas fa-medal"></i>Years of experience
 						</p>
 						<span class="avatar-p_text">{{ this.years }} years</span>
-					</div>
-
-					<div class="col-md-12">
-						<p class="avatar-text-white">
-							<i class="fas fa-laptop-code"></i>Programming Languages
-						</p>
-						<span class="avatar-p_text">
-							{% for prog_lang in this.programing_languages%}
-
-							{{ prog_lang }}, {% endfor %}
-						</span>
-					</div>
-					<div class="col-md-12">
-						<p class="avatar-text-white">
-							<i class="fas fa-code"></i>Technologies / Frameworks
-						</p>
-						<span class="avatar-p_text"> {{ this.technologies }}</span>
 					</div>
 				</div>
 			</div>
