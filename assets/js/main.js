@@ -26,7 +26,10 @@ const composedFilter = () => {
 
 	//filter by age
 	const filteredProfiles = allProfiles
-		.filter(profile => profile.dataset.years >= years) //by years
+		.filter(
+			profile =>
+				years === "all" || profile.dataset.years.indexOf(years) !== -1
+		) //by years
 		.filter(
 			// by prog languages
 			profile =>
