@@ -149,3 +149,28 @@ body {
 	font-size: 28px;
 	margin-top: 20px;
 }
+
+.tech-info,
+.contact-info {
+	padding: 13px;
+
+	border-radius: 10px;
+	margin: 20px 0;
+}
+
+.contact-info {
+	background-color: var(--morado-2);
+	margin-top: 0;
+}
+.tech-info {
+	background-color: var(--plomo-talently);
+}
+.tech-info h3,
+.contact-info h3 {
+	color: var(--blanco-talently);
+	font-size: 20px;
+}
+
+.contact-info-col {
+	/* padding: 0; */
+}

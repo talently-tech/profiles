@@ -30,79 +30,108 @@ endblock %} {% block styles%}
 					</p>
 				</div>
 			</div>
+
 			<div class="col-md-12 avatar-info_direct mb-5">
 				<div class="row">
-					<div class="col-md-12">
-						<p class="avatar-text-white">
-							<i class="fas fa-laptop-code"></i>Programming Languages
-						</p>
-						<span class="avatar-p_text">
-							{% for prog_lang in this.programing_languages%}
+					<div class="col-12">
+						<div class="tech-info">
+							<div class="row">
+								<h3 class="col-12">Tech Stack</h3>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<p class="avatar-text-white">
+										<i class="fas fa-laptop-code"></i>Programming
+										Languages
+									</p>
+									<span class="avatar-p_text">
+										{% for prog_lang in this.programing_languages%}
 
-							{{ prog_lang }}, {% endfor %}
-						</span>
+										{{ prog_lang }}, {% endfor %}
+									</span>
+								</div>
+								<div class="col-md-12">
+									<p class="avatar-text-white">
+										<i class="fas fa-code"></i>Technologies /
+										Frameworks
+									</p>
+									<span class="avatar-p_text">
+										{{ this.technologies }}</span
+									>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-12">
+					<div class="col-12">
+						<div class="contact-info">
+							<div class="row">
+								<h3 class="col-12">Contact Information</h3>
+							</div>
+							<div class="row">
+								<div class="contact-info-col col-md-6">
+									<p class="avatar-text-white">
+										<i class="fas fa-envelope"></i>Email
+									</p>
+									<a
+										class="avatar-p_text"
+										href="#"
+										>{{this.email or 'Not set'}}</a
+									>
+								</div>
+								<div class="contact-info-col col-md-6">
+									<p class="avatar-text-white">
+										<i class="fas fa-phone-volume"></i>Phone
+									</p>
+									<a
+										class="avatar-p_text"
+										href="tel:{{this.phone or '#'}}"
+										>{{this.phone or "Not set"}}</a
+									>
+								</div>
+								<div class="contact-info-col col-md-6">
+									<p class="avatar-text-white">
+										<i class="fab fa-linkedin-in"></i>Linkedin
+									</p>
+									<a
+										class="avatar-p_text"
+										href="{{ this.linkedin }}"
+										>{{this.linkedin_handle or "Not set"}}</a
+									>
+								</div>
+								<div class="col-md-6">
+									<p class="avatar-text-white">
+										<i class="fab fa-github"></i>Github
+									</p>
+									<a
+										class="avatar-p_text"
+										target="_blank"
+										href="{{ this.github }}"
+										>{{this.github_handle or "Not set"}}</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{% if this.portfolio %}
+					<div class="col-md-6">
 						<p class="avatar-text-white">
-							<i class="fas fa-code"></i>Technologies / Frameworks
+							<i class="fas fa-briefcase"></i>Portfolio
 						</p>
-						<span class="avatar-p_text"> {{ this.technologies }}</span>
+						<span class="avatar-p_text">{{ this.portfolio }} </span>
+					</div>
+					{% endif %}
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fas fa-medal"></i>Experience
+						</p>
+						<span class="avatar-p_text">{{ this.years }} years</span>
 					</div>
 					<div class="col-md-6">
 						<p class="avatar-text-white">
 							<i class="fas fa-map-marker-alt"></i>Location
 						</p>
 						<a class="avatar-p_text" href="#">{{ this.country }}</a>
-					</div>
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fas fa-envelope"></i>Email
-						</p>
-						<a
-							class="avatar-p_text"
-							href="#"
-							>{{this.email or 'Not set'}}</a
-						>
-					</div>
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fas fa-briefcase"></i>Portfolio
-						</p>
-						<span
-							class="avatar-p_text"
-							>{{this.portfolio or 'Not set'}}</span
-						>
-					</div>
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fas fa-phone-volume"></i>Phone
-						</p>
-						<a
-							class="avatar-p_text"
-							href="tel:{{this.phone or '#'}}"
-							>{{this.phone or "Not set"}}</a
-						>
-					</div>
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fab fa-github"></i>Github
-						</p>
-						<a
-							class="avatar-p_text"
-							target="_blank"
-							href="{{ this.github }}"
-							>{{this.github_handle or "Not set"}}</a
-						>
-					</div>
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fab fa-linkedin-in"></i>Linkedin
-						</p>
-						<a
-							class="avatar-p_text"
-							href="{{ this.linkedin }}"
-							>{{this.linkedin_handle or "Not set"}}</a
-						>
 					</div>
 
 					<div class="col-md-6">
@@ -125,12 +154,6 @@ endblock %} {% block styles%}
 							<i class="fas fa-university"></i>Education
 						</p>
 						<span class="avatar-p_text">{{ this.education }}</span>
-					</div>
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fas fa-medal"></i>Years of experience
-						</p>
-						<span class="avatar-p_text">{{ this.years }} years</span>
 					</div>
 				</div>
 			</div>
