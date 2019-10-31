@@ -1,0 +1,19 @@
+:root {
+	/*colores de la web */
+	--rojo-talently: rgb(252, 43, 59);
+	--rojo-talently-oscuro: rgb(174, 0, 13);
+	--morado-talently: rgb(61, 53, 110);
+	--plomo-talently: rgb(47, 47, 47);
+	--blanco-talently: rgb(230, 227, 227);
+	--gris-talently: #999999;
+	--texto-plomo: #584b53;
+
+	/* colores paleta 1 */
+	--blanco-leve: #fff8f0;
+	--morado-2: #51355a;
+
+	--text-roboto: "Roboto";
+
+	/* Variables compuestas*/
+	--titulo-oscuro: var(--morado-talently);
+}

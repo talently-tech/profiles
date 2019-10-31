@@ -1,0 +1,55 @@
+.c-header {
+	background: white;
+	position  : fixed;
+	top       : 0;
+	right     : 0;
+	left      : 0;
+	z-index   : 1030;
+}
+
+.c-header .navbar {
+	box-shadow: 0 0 9px #ddd;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: var(--plomo-talently);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: var(--morado-talently);
+}
+
+.content-profile,
+.backgraund-busqueda {
+	margin-top: 84px;
+}
+
+/* .avatar-blocks {
+	height    : auto;
+	overflow-y: hidden;
+} */
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {
+	/* .c-header {
+		position: relative;
+	} */
+
+	/* .avatar-blocks {
+		height    : calc(100vh - 84px);
+		overflow-y: scroll;
+	} */
+
+	/* .avatar-background {
+		height: calc(100vh - 84px);
+	} */
+
+	/* .backgraund-busqueda {
+		margin-top: 0;
+	} */
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
