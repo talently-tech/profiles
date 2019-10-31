@@ -1,198 +1,190 @@
 {% extends "layout.html" %} {% block title %}{{ this.fullname }} | Talently{%
-endblock %} 
-
-{%
-block styles%}
+endblock %} {% block styles%}
 {{ super() }}
 <link rel="stylesheet" href="{{ '/css/osaei.css' | url }}" />
 <link rel="stylesheet" href="{{ '/css/nestor.css' | url }}" />
-{% endblock styles %}
-{% block content %} 	
-
+{% endblock styles %} {% block content %}
 
 <div class="container-fluid content-profile">
-    <div class="row">
-        <div class="col-md-5 col-lg-4 col-xl-3 avatar-background">
-            <div class="col-12 avatar-img">
-                {% for image in this.attachments.images %}
-                    {% if loop.index <= 1%} {# esto lo hacemos porque solo queremos la primera imagen #}
-                <img class="img-avatar img-fluid" src="{{image | url}}" alt="" />
-                    {% endif %}
-                {% endfor%}
-                
-                <h1 class="avatar-name">{{this.fullname}}</h1>
-                <p class="avatar-text">{{this.headline}}</p>
-            </div>
-            <div class="avatar-info">
-                <div class="col-12">
-                {% for option in this.work_options %}
-                    <p
-                        class="avatar-link-shadow" 
-                        
-                    >
-                        {{option}}
-                    </p>
-                {% endfor%}
+	<div class="row">
+		<div class="col-md-5 col-lg-4 col-xl-3 avatar-background">
+			<div class="col-12 avatar-img">
+				{% for image in this.attachments.images %} {% if loop.index <= 1%}
+				{# esto lo hacemos porque solo queremos la primera imagen #}
+				<img class="img-avatar img-fluid" src="{{ image | url }}" alt="" />
+				{% endif %} {% endfor%}
 
-                
-                {% if this.availability %}
-                <p
-                        class="avatar-link-shadow avatar-link-shadow--highlight" 
-                        
-                    >
-                    {{this.availability}}
-                    
-                {% endif %}
-                    
-                </div>
-            </div>
-            <div class="col-md-12 avatar-info_direct mb-5">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="avatar-text-white">
-                            <i class="fas fa-map-marker-alt"></i>Location
-                        </p>
-                        <a class="avatar-p_text" href="#">{{this.country}}</a>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="avatar-text-white">
-                            <i class="fas fa-envelope"></i>Email
-                        </p>
-                        <a class="avatar-p_text" href="#">{{this.email or 'Not set'}}</a>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="avatar-text-white">
-                            <i class="fas fa-briefcase"></i>Portfolio
-                        </p>
-                        <span class="avatar-p_text">{{this.portfolio or 'Not set'}}</span>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="avatar-text-white">
-                            <i class="fas fa-phone-volume"></i>Phone
-                        </p>
-                        <a class="avatar-p_text" href="tel:{{this.phone or '#'}}">{{this.phone or "Not set"}}</a>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="avatar-text-white">
-                            <i class="fab fa-github"></i>Github
-                        </p>
-                        <a class="avatar-p_text" target="_blank"href="{{this.github}}">{{this.github_handle or "Not set"}}</a>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="avatar-text-white">
-                            <i class="fab fa-linkedin-in"></i>Linkedin
-                        </p>
-                        <a class="avatar-p_text" href="{{this.linkedin}}">{{this.linkedin_handle or "Not set"}}</a>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="avatar-text-white">
-                            <i class="fas fa-globe-africa"></i>Country
-                        </p>
-                        <span class="avatar-p_text">{{this.country or "Not set"}}</span>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="avatar-text-white">
-                            <i class="fas fa-clock"></i>Timezone
-                        </p>
-                        <span class="avatar-p_text">{{this.timezone}}</span>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="avatar-text-white">
-                            <i class="fas fa-comments"></i>Languages
-                        </p>
-                        <span class="avatar-p_text">
-                            {% for lang in this.languages %}
-                            {{lang}} /
-                            {% endfor %}
-                        </span>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="avatar-text-white">
-                            <i class="fas fa-university"></i>Education
-                        </p>
-                        <span class="avatar-p_text">{{this.education}}</span>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="avatar-text-white">
-                            <i class="fas fa-medal"></i>Years of experience
-                        </p>
-                        <span class="avatar-p_text">{{this.years}} years</span>
-                    </div>
+				<h1 class="avatar-name">{{ this.fullname | title }}</h1>
+				<p class="avatar-text">{{ this.headline | capitalize }}</p>
+			</div>
+			<div class="avatar-info">
+				<div class="col-12">
+					{% for option in this.work_options %}
+					<p class="avatar-link-shadow">
+						{{ option | capitalize }}
+					</p>
+					{% endfor%} {% if this.availability %}
+					<p class="avatar-link-shadow avatar-link-shadow--highlight">
+						{{ this.availability }}
 
-                    <div class="col-md-12">
-                        <p class="avatar-text-white">
-                            <i class="fas fa-laptop-code"></i>Programming
-                            Languages
-                        </p>
-                        <span class="avatar-p_text"
-                            >
-                            {% for prog_lang in this.programing_languages%}
+						{% endif %}
+					</p>
+				</div>
+			</div>
+			<div class="col-md-12 avatar-info_direct mb-5">
+				<div class="row">
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fas fa-map-marker-alt"></i>Location
+						</p>
+						<a class="avatar-p_text" href="#">{{ this.country }}</a>
+					</div>
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fas fa-envelope"></i>Email
+						</p>
+						<a
+							class="avatar-p_text"
+							href="#"
+							>{{this.email or 'Not set'}}</a
+						>
+					</div>
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fas fa-briefcase"></i>Portfolio
+						</p>
+						<span
+							class="avatar-p_text"
+							>{{this.portfolio or 'Not set'}}</span
+						>
+					</div>
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fas fa-phone-volume"></i>Phone
+						</p>
+						<a
+							class="avatar-p_text"
+							href="tel:{{this.phone or '#'}}"
+							>{{this.phone or "Not set"}}</a
+						>
+					</div>
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fab fa-github"></i>Github
+						</p>
+						<a
+							class="avatar-p_text"
+							target="_blank"
+							href="{{ this.github }}"
+							>{{this.github_handle or "Not set"}}</a
+						>
+					</div>
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fab fa-linkedin-in"></i>Linkedin
+						</p>
+						<a
+							class="avatar-p_text"
+							href="{{ this.linkedin }}"
+							>{{this.linkedin_handle or "Not set"}}</a
+						>
+					</div>
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fas fa-globe-africa"></i>Country
+						</p>
+						<span
+							class="avatar-p_text"
+							>{{this.country or "Not set"}}</span
+						>
+					</div>
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fas fa-clock"></i>Timezone
+						</p>
+						<span class="avatar-p_text">{{ this.timezone }}</span>
+					</div>
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fas fa-comments"></i>Languages
+						</p>
+						<span class="avatar-p_text">
+							{% for lang in this.languages %}
+							{{ lang }} / {% endfor %}
+						</span>
+					</div>
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fas fa-university"></i>Education
+						</p>
+						<span class="avatar-p_text">{{ this.education }}</span>
+					</div>
+					<div class="col-md-6">
+						<p class="avatar-text-white">
+							<i class="fas fa-medal"></i>Years of experience
+						</p>
+						<span class="avatar-p_text">{{ this.years }} years</span>
+					</div>
 
-                            {{prog_lang}}, 
-                            {% endfor %}
-                            </span
-                        >
-                    </div>
-                    <div class="col-md-12">
-                        <p class="avatar-text-white">
-                            <i class="fas fa-code"></i>Technologies / Frameworks
-                        </p>
-                        <span class="avatar-p_text"
-                            >{% for tech in this.technologies%}
+					<div class="col-md-12">
+						<p class="avatar-text-white">
+							<i class="fas fa-laptop-code"></i>Programming Languages
+						</p>
+						<span class="avatar-p_text">
+							{% for prog_lang in this.programing_languages%}
 
-                            {{tech}}, 
-                            {% endfor %}</span
-                        >
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div
-            class="col-md-7 col-lg-8 col-xl-9 avatar-backgraund_white pr-md-0"
-        >
-            <div class="avatar-blocks p-3">
-                <div class="row">
-                    <div class="col-lg-7 col-xl-5">
-                        <div class="avatar-block">
-                            <h2 class="avatar-h2_title">Summary</h2>
-                            <p>
-                                {{this.summary}}
-                            </p>
-                        </div>
-                        <div class="avatar-block">
-                            <h2 class="avatar-h2_title">What I am proud of</h2>
-                            <p>
-                                {{this.proud_of}}
-                            </p>
-                        </div>
-                        <div class="avatar-block">
-                            <h2 class="avatar-h2_title">What I am looking for</h2>
-                            <p>
-                                {{this.looking_for}}
-                            </p>
-                        </div>
-                        <div class="avatar-block">
-                            <h2 class="avatar-h2_title">What Interests me</h2>
-                            <p>
-                                {{this.interests}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+							{{ prog_lang }}, {% endfor %}
+						</span>
+					</div>
+					<div class="col-md-12">
+						<p class="avatar-text-white">
+							<i class="fas fa-code"></i>Technologies / Frameworks
+						</p>
+						<span class="avatar-p_text"> {{ this.technologies }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-7 col-lg-8 col-xl-9 avatar-backgraund_white pr-md-0">
+			<div class="avatar-blocks p-3">
+				<div class="row">
+					<div class="col-lg-7 col-xl-5">
+						<div class="avatar-block">
+							<h2 class="avatar-h2_title">Summary</h2>
+							<p>
+								{{ this.summary }}
+							</p>
+						</div>
+						<div class="avatar-block">
+							<h2 class="avatar-h2_title">What I am proud of</h2>
+							<p>
+								{{ this.proud_of }}
+							</p>
+						</div>
+						<div class="avatar-block">
+							<h2 class="avatar-h2_title">What I am looking for</h2>
+							<p>
+								{{ this.looking_for }}
+							</p>
+						</div>
+						<div class="avatar-block">
+							<h2 class="avatar-h2_title">What Interests me</h2>
+							<p>
+								{{ this.interests }}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-        
-         
 
-
- {% endblock%} {%block footer_scripts %}
+{% endblock%} {%block footer_scripts %}
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="{{ '/css/js/jquery-3.2.1.slim.min.js' | url }}"></script>
 <script src="{{ '/css/js/popper.min.js' | url }}"></script>
 <script src="{{ '/css/js/bootstrap.min.js' | url }}"></script>
-
 
 {% endblock %}
