@@ -27,6 +27,7 @@ body {
 .avatar-name {
 	color: white;
 	font-weight: 200;
+	padding-bottom: 40px;
 }
 
 .avatar-text {
