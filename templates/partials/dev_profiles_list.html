@@ -20,25 +20,27 @@
 				<div class="col-10 col-sm-11 col-lg-5 bacgraund-avatar d-flex">
 					<div class="d-flex">
 						<div class="avatar-container">
-							{% for image in profile.attachments.images %}
-								{% if loop.index <= 1%} {# esto lo hacemos porque solo queremos la primera imagen #}
-							<img class="img-fluid" src="{{image | url}}" alt="" />
-								{% endif %}
-							{% endfor%}
+							{% for image in profile.attachments.images %} {% if
+							loop.index <= 1%} {# esto lo hacemos porque solo queremos
+							la primera imagen #}
+							<img class="img-fluid" src="{{ image | url }}" alt="" />
+							{% endif %} {% endfor%}
 						</div>
 						<div class="nombres-avatar flex-direction-column ">
-							<a href="{{profile | url}}">
-								<h2 class="mb-0">{{ profile.fullname }}</h2>
+							<a href="{{ profile | url }}">
+								<h2 class="mb-0">
+									{{ profile.fullname | title }}
+								</h2>
 							</a>
 							<p class="mb-0">
 								<span
 									><i class="fas fa-map-marker-alt"></i>
-									{{ profile.country }}</span
+									{{ profile.country | capitalize }}</span
 								>
 							</p>
 							<div>
 								{% for option in profile.work_options %}
-								<span>{{ option }}</span>
+								<span>{{ option | capitalize }}</span>
 								{% endfor%}
 							</div>
 						</div>
@@ -48,7 +50,7 @@
 					<div class="info-avatar d-none d-lg-block ">
 						<h3>Before RC</h3>
 						<p>
-							{{ profile.summary }}
+							{{ profile.summary | truncate(140) }}
 						</p>
 					</div>
 					<div class="link-icons-container">
