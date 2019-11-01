@@ -49,7 +49,9 @@ body {
 
 .select {
 	position: relative;
-	width: 24%;
+	margin-bottom: 1rem;
+
+	/* width: 24%; */
 }
 
 /* .select::after {
@@ -187,4 +189,16 @@ body {
 a {
 	text-decoration: none;
 	list-style: none;
+}
+
+.c-filters-nav {
+	padding: 0;
+}
+.c-filters-nav button {
+	border: none;
+	padding-left: 0;
+}
+
+.c-filters-nav .navbar-collapse {
+	margin-top: 1rem;
 }
