@@ -112,48 +112,63 @@ endblock %} {% block styles%}
 							</div>
 						</div>
 					</div>
+					<div class="col-12">
+						<div class="extra-info">
+							<div class="row">
+								{% if this.portfolio %}
+								<div class="col-md-6">
+									<p class="avatar-text-white">
+										<i class="fas fa-briefcase"></i>Portfolio
+									</p>
+									<span class="avatar-p_text"
+										>{{ this.portfolio }}
+									</span>
+								</div>
+								{% endif %}
+								<div class="col-md-6">
+									<p class="avatar-text-white">
+										<i class="fas fa-medal"></i>Experience
+									</p>
+									<span class="avatar-p_text"
+										>{{ this.years }} years</span
+									>
+								</div>
+								<div class="col-md-6">
+									<p class="avatar-text-white">
+										<i class="fas fa-university"></i>Education
+									</p>
+									<span class="avatar-p_text">{{
+										this.education
+									}}</span>
+								</div>
+								<div class="col-md-6">
+									<p class="avatar-text-white">
+										<i class="fas fa-map-marker-alt"></i>Location
+									</p>
+									<a class="avatar-p_text" href="#">{{
+										this.country
+									}}</a>
+								</div>
 
-					{% if this.portfolio %}
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fas fa-briefcase"></i>Portfolio
-						</p>
-						<span class="avatar-p_text">{{ this.portfolio }} </span>
-					</div>
-					{% endif %}
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fas fa-medal"></i>Experience
-						</p>
-						<span class="avatar-p_text">{{ this.years }} years</span>
-					</div>
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fas fa-map-marker-alt"></i>Location
-						</p>
-						<a class="avatar-p_text" href="#">{{ this.country }}</a>
-					</div>
-
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fas fa-clock"></i>Timezone
-						</p>
-						<span class="avatar-p_text">{{ this.timezone }}</span>
-					</div>
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fas fa-comments"></i>Languages
-						</p>
-						<span class="avatar-p_text">
-							{% for lang in this.languages %}
-							{{ lang }} / {% endfor %}
-						</span>
-					</div>
-					<div class="col-md-6">
-						<p class="avatar-text-white">
-							<i class="fas fa-university"></i>Education
-						</p>
-						<span class="avatar-p_text">{{ this.education }}</span>
+								<div class="col-md-6">
+									<p class="avatar-text-white">
+										<i class="fas fa-clock"></i>Timezone
+									</p>
+									<span class="avatar-p_text">{{
+										this.timezone
+									}}</span>
+								</div>
+								<div class="col-md-6">
+									<p class="avatar-text-white">
+										<i class="fas fa-comments"></i>Languages
+									</p>
+									<span class="avatar-p_text">
+										{% for lang in this.languages %}
+										{{ lang }} / {% endfor %}
+									</span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
