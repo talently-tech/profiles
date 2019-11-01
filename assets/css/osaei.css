@@ -175,3 +175,8 @@ body {
 .contact-info-col {
 	/* padding: 0; */
 }
+
+a.avatar-link-shadow--highlight:hover {
+	background-color: var(--rojo-talently-oscuro);
+	text-decoration: none;
+}
