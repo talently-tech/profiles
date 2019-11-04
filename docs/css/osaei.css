@@ -106,7 +106,7 @@ body {
 	color: var(--blanco-talently);
 	font-size: 13px;
 	margin-bottom: 0;
-	border-bottom: 1px solid var(--gris-talently);
+	/* border-bottom: 1px solid var(--gris-talently); */
 	font-weight: 600;
 }
 
@@ -150,6 +150,7 @@ body {
 	margin-top: 20px;
 }
 
+.extra-info,
 .tech-info,
 .contact-info {
 	padding: 13px;
@@ -173,4 +174,9 @@ body {
 
 .contact-info-col {
 	/* padding: 0; */
+}
+
+a.avatar-link-shadow--highlight:hover {
+	background-color: var(--rojo-talently-oscuro);
+	text-decoration: none;
 }
