@@ -22,7 +22,7 @@ endblock %} {% block styles%}
 					<p class="avatar-link-shadow">
 						{{ option | capitalize }}
 					</p>
-					{% endfor%} {% if this.availability %}
+					{% endfor%} {% if this.availability != "none" %}
 					<p class="avatar-link-shadow avatar-link-shadow--highlight">
 						{{ this.availability }}
 
