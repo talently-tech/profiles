@@ -1,6 +1,6 @@
 fullname: Carlos Alva
 ---
-availability: Available
+availability: none
 ---
 country: Peru
 ---
@@ -24,7 +24,12 @@ programing_languages: Php, JS
 ---
 summary:
 
-Senior fullstack Software engineer with 8+ years of experience. 
+Software Engineer with a BS degree in Computer and Systems Engineering, strong leadership and teamwork
+skills. Over 8 years of software development experience with emphasis on PHP technologies and frontend.
+
+Passioned about innovation, always looking to improve processes through automation and applying new technologies to reach business goals.
+
+Strong believe in breaking the routine and learning from other areas to understand their problems and suggest solutions. Entrepreneur by heart eager to crack new challenges and make things happen!
 ---
 technologies: Laravel, synfony, zend, codeigniter, react, vue
 ---
@@ -33,3 +38,11 @@ timezone: GMT -5
 work_options: Remote
 ---
 years: 7+
+---
+interests: Social life, technology, cars, investment, digital marketing and bussiness networking
+---
+looking_for:
+
+Work in a friendly remote company . 
+---
+proud_of: Proud of having created 2 startups and learned on many areas. Gained experience from many American clients. Worked as CTO making critical decisions and helped company to rearrange processes by implementing a remote culture and methodology.
